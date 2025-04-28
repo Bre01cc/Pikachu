@@ -1,0 +1,122 @@
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  :root {
+    --primary-color:#F5CF06 ;
+    --secundary-color: #8E4106;
+  }
+  body{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    background-color:var(--primary-color) ;
+    font-family: "Righteous", sans-serif;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 70px 24px;
+    
+  }
+  header{
+    /* background-color: var(--primary-color); */
+    background-color: aqua;
+    display: flex;
+    height: 15%;
+    width: 100%;
+    align-items: center;
+  }
+  header img{
+    position: absolute;
+  }
+  main{
+    background-color: var(--primary-color);
+    display: flex;
+    /* flex-direction: column-reverse; */
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    /* height: 60%;
+    width: 100%; */
+  }
+  .back{
+    /* background-image: url(./img/Pikachu\ back.png); */
+  }
+  .imgPikachu{
+    /* background-color: aliceblue; */
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    height: 100%;
+    width: 20%;
+  }
+  
+  .Download{
+    display: flex;
+    align-items: end;
+    height: 100%;
+    width: 34%;  
+    
+    
+  }
+  .caixa{
+    background-color: #8E4106;
+    height: 10%;
+    width: 411px;
+    display: flex;
+    align-items: center;
+   justify-content: center;
+  
+
+  }
+  .caixa span{
+    color: white;
+    font-size: 40px;
+  }
+  .frasesLets{
+    display: flex; 
+    /* background-color: blueviolet; */
+    width: 34%;
+    height: 100%;
+    align-items: end;
+    justify-content: center;
+    flex-direction: column;
+    
+  }
+  
+  .frasesLets span{
+    color: #8E4106;
+    font-weight:600 ;
+    font-size: 64px;
+    line-height: 100%;
+     
+  }
+  .frasesLets p{
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 100%;
+  }
+
+  footer{
+    /* background-color: var(--primary-color); */
+    background-color: rgb(0, 225, 255);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height:15% ;
+  }
+ footer a{
+    color: #8E4106;
+    font-weight: 550;
+
+
+ }
