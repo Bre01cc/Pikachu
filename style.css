@@ -1,133 +1,138 @@
-
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-  }
-  
-  a {
-    text-decoration: none;
-    color: inherit;
-  }
-  ul,ol,li{
-    list-style: none;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
-  :root {
-    --primary-color:#F5CF06 ;
-    --secundary-color: #8E4106;
-  }
-  body{
-    height: 100vh;
-    width: 100vw;
-    display: flex;
-    flex-direction: column;
-    background-color:var(--primary-color) ;
-    font-family: "Righteous", sans-serif;
-    align-items: center;
-    justify-content: center;
-    padding: 0px 70px ;
-    
-  }
-  header{
-    display: flex;
-    height: 10%;
-    width: 100%;
-    align-items: center;
-  }
-  header img{
-    position: absolute;
-  }
-  main{
-    position: relative;
-    background-image: url('./img/Pikachu back.png');
-    background-size: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-position: center top -90px;
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+ul,
+ol,
+li {
+  list-style: none;
+}
+:root {
+  --primary-color: #f5cf06;
+  --secondary-color: #8e4106;
+}
+body {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--primary-color);
+  font-family: "Righteous", sans-serif;
+  align-items: center;
+  justify-content: center;
+  padding: 0px 70px;
+}
+header {
+  display: flex;
+  height: 10%;
+  width: 100%;
+  align-items: center;
+}
+header img {
+  position: absolute;
+}
+main {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+}
+.background-logo{
+  position: fixed;
+  width: 100%;
+  max-height: 100%;
+  margin: auto;
+  top: -245px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.Pikachu-img{
+  top: 3rem;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  height: 100%;
+  width: 10%;
+  position: absolute;
+  z-index: -1;
+
+}
+
+.Download-container {
+  display: flex;
+  align-items: flex-end;
+  height: 100%;
+  width: 40%;
+  padding: 0 0 0 13rem;
+}
+.box-text {
+  /* position: relative;
+  left: 20rem; */
+ 
+  gap: 1.5rem;
+  background-color: #8e4106;
+  height: 4rem;
+  width: 35rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.box-text span {
+  color: white;
+  font-size: 2.5rem;
+}
+.text-section {
+  position: relative;
+  display: flex;
+  right: 7.7rem;
+  width: 60%;
+  height: 100%;
+  align-items: flex-end;
+  justify-content: center;
+  flex-direction: column;
+}
+.text-section div {
+  position: relative;
+  top:13rem;
+  right: 7rem;
+  color: #8e4106;
+  font-weight: 500;
+  font-size: 2rem;
+}
+.text-section p {
+  font-size: 1.25rem;
+  line-height: 100%;
   
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    flex-grow: 1;
-  }
-  .imgPikachu{
-    /* background-color: aliceblue; */
-    transform: translateY(30px);
-    display: flex;
-    align-items: end;
-    justify-content: center;
-    height: 100%;
-    width: 20%;
-    position: fixed;
-  }
-  
-  .Download{
-    transform: translateX(200px);
-    display: flex;
-    align-items: end;
-    height: 100%;
-    width: 34%;  
-    /* position: fixed; */
-    /* position: absolute; */
-    
-    
-  }
-  .caixa{
-    gap: 10px;
-    transform: translateY(-15px);
-    background-color: #8E4106;
-    height: 13%;
-    width: 400px;
-    display: flex;
-    align-items: center;
-   justify-content: center;
-  
+}
+.section-title h2{
+  font-weight: 400;
+  font-size: 4rem;
 
-  }
-  .caixa span{
-    color: white;
-    font-size: 40px;
-  }
-  .frasesLets{
-    position: absolute;
-    display: flex; 
-    transform: translateX(-125px);
-    /* transform: translateY(50px); */
-    width: 34%;
-    height: 100%;
-    align-items: end;
-   position: relative;
-    justify-content: center;
-    flex-direction: column;
-    
-  }
-  .frasesLets span{
-    transform: translateY(180px);
-    color: #8E4106;
-    font-weight:500 ;
-    font-size: 2.3rem;
-    line-height: 100%;
-     
-  }
-  .frasesLets p{
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 100%;
-  }
-
-  footer{
-    /* background-color: var(--primary-color); */
-    /* background-color: rgb(0, 225, 255); */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height:10% ;
-  }
- footer a{
-    color: #8E4106;
-    font-weight: 550;
-
-
- }
+}
+footer {
+  display: flex;
+  position: relative;
+  top: 1rem;
+  right: 2rem;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 13%;
+}
+footer a {
+  color: #8e4106;
+  font-weight: 500;
+}
