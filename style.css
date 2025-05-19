@@ -27,7 +27,8 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  min-height: 100vh;
+  /* height: 100vh; */
   font-family: "Righteous", sans-serif;
   background-color: var(--primary-color);
 }
@@ -37,10 +38,9 @@ footer {
   width: 100vw;
 }
 header {
- padding: auto;
+  background-color: aqua;
+  padding: 10px;
   height: 10vh;
-
-
 }
 main {
   display: flex;
@@ -51,13 +51,15 @@ main {
 .container {
   position: relative;
   display: grid;
+  /* gap: clamp(2rem, 5vw, 359px);  */
   gap: 359px;
   grid-template-columns: repeat(3, 1fr);
   height: 100%;
   width: 100%;
   place-items: center;
-
-  padding: 0 70px 0;
+  width: 100%;
+  /* padding: 0 5vw; */
+  padding-top: 0;
   align-items: end;
 }
 
@@ -87,15 +89,17 @@ main {
 }
 .box-text {
   position: relative;
-  left: 70px;
+  left: 130px;
   bottom: 30px;
   display: flex;
   flex-direction: column;
   height: 144px;
   width: 630px;
+  /* width: 100%; */
+  /* max-width: 630px; */
   padding: 30px;
   justify-content: center;
-  z-index: 3;
+  /* z-index: 3; */
 }
 .box-text h1 {
   position: relative;
@@ -113,7 +117,7 @@ main {
 }
 .box-download {
   display: flex;
-  align-items:center;
+  align-items: center;
   justify-content: center;
   height: 70px;
   font-size: 1.5rem;
@@ -122,19 +126,19 @@ main {
 }
 .box-download h1 {
   color: #ffffff;
-} 
+}
 
- footer{
+footer {
   display: flex;
   align-items: center;
   justify-content: center;
   color: var(--secondary-color);
   height: 10vh;
 }
-.autor{
+.autor {
   transition: 1s;
 }
-.autor:hover{
+.autor:hover {
   color: #ffffff;
 }
 @media (max-width: 768px) {
@@ -142,12 +146,12 @@ main {
     display: none;
   }
   .container {
+    padding-bottom: 15px;
     gap: 0;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    
   }
   .back {
     bottom: 200px;
@@ -159,21 +163,36 @@ main {
     /* background-color: rgb(65, 167, 167); */
   }
   .box {
-    background-color: bisque;
     order: 3;
     display: flex;
     align-items: center;
     justify-content: center;
   }
   .box-text {
-    height: 135px;
-    background-color: aliceblue;
+    height: 130px;
+    text-align: center;
+    width: 510px;
     left: 0;
     bottom: 0;
+    background-color: #ffffff;
+    padding: 0;
     order: 2;
+  }
+  /* .box-text p{
+    text-align: center;
+  }
+  .box-text span{
+   
+     text-align: center; */
+
+  .box-text h1 {
+    white-space: nowrap;
   }
 }
 @media (max-width: 360px) {
+  .container {
+    padding-bottom: 30px;
+  }
   .box-download {
     width: 312px;
     font-size: 25px;
@@ -182,10 +201,12 @@ main {
     display: none;
   }
   .box-text {
+    background-color: inherit;
     width: 332px;
-    height: 60px;
+    height: 50px;
+    /* height: 60px; */
   }
-  .box-text h1{
+  .box-text h1 {
     font-size: 40px;
   }
   .pikachu {
