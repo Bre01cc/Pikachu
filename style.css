@@ -1,4 +1,3 @@
-
 * {
   padding: 0;
   margin: 0;
@@ -20,154 +19,177 @@ li {
   --primary-color: #f5cf06; /* Amarelo */
   --secondary-color: #8e4106; /* Marrom */
   --text-color: #333; /* Cinza escuro */
-  --background-color: #ffffff; /* Branco */
+  --background-color: #ffffff;
 }
 
 body {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
-  background-color: var(--primary-color);
-  display: flex;
+  height: 100vh;
   font-family: "Righteous", sans-serif;
-  flex-direction: column;
-  margin: 0 auto;
-  padding: 0 2%;
+  background-color: var(--primary-color);
 }
-header{
-  width: 100%;
-  padding: 20px 0;
-  background-color: aqua;
+header,
+main,
+footer {
+  width: 100vw;
+}
+header {
+ padding: auto;
   height: 10vh;
+
+
 }
 main {
   display: flex;
-  align-items: flex-end;
-  justify-content: center;
+  justify-content: flex-end;
+  flex-direction: column;
+  flex-grow: 1;
+}
+.container {
+  position: relative;
+  display: grid;
+  gap: 359px;
+  grid-template-columns: repeat(3, 1fr);
+  height: 100%;
   width: 100%;
-  height: 80vh;
- gap: 20px;
- position: relative;
+  place-items: center;
+
+  padding: 0 70px 0;
+  align-items: end;
 }
 
-.box-text {
-  width: 530px;
-  height: 154px;
-  text-align: center;
-  background-color: bisque;
+.back {
   position: absolute;
-  left: -100;
+  z-index: -2;
+  width: 100%;
+  height: 100%;
+  background-image: url(./img/Pikachu\ back.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  bottom: 130px;
 }
 
+.pikachu {
+  height: 29rem;
+  width: 30rem;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  position: absolute;
+  z-index: -1;
+}
+.pikachu img {
+  width: 100%;
+}
+.box-text {
+  position: relative;
+  left: 70px;
+  bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  height: 144px;
+  width: 630px;
+  padding: 30px;
+  justify-content: center;
+  z-index: 3;
+}
 .box-text h1 {
-  color: var(--secondary-color);
+  position: relative;
+  color: #8e4106;
+  flex-grow: 1;
   font-size: 64px;
+  width: 100%;
 }
-
-.box-text p {
-  color: var(--secondary-color);
-  font-size: 20px;
+.box-text span {
+  height: 75px;
+  color: #8e4106;
 }
-.pikachu{
-  background-color: azure;
-  width: 559px;
-  height: 541px;
-display: flex;
-align-items: flex-end;
-justify-content: center;
-z-index: -1;
-
-
+.box {
+  width: 100%;
 }
 .box-download {
   display: flex;
-  align-items: center;
+  align-items:center;
   justify-content: center;
+  height: 70px;
+  font-size: 1.5rem;
+  width: 300px;
   background-color: var(--secondary-color);
-  width: 411px;
-  height: 90px; 
-  color: white;
-  font-size: 48px;
-  text-align: center;
 }
+.box-download h1 {
+  color: #ffffff;
+} 
 
-footer {
+ footer{
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #8e4106;
+  color: var(--secondary-color);
   height: 10vh;
-  width: 100%;
+}
+.autor{
+  transition: 1s;
+}
+.autor:hover{
+  color: #ffffff;
 }
 @media (max-width: 768px) {
-  body{
-    flex-direction: column;
-  }
-  main{
-    flex-direction: column;
-    height: 88vh;
-    align-items: center;
-    background-color: aqua;
-    justify-content: flex-end;
-  }
-  .pikachu{
-    order: 1;
-  }
-  .box-text{
-    order: 2;
-  }
-  .box-download{
-    order: 3;
-  }
-  footer{
+  footer {
     display: none;
+  }
+  .container {
+    gap: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    
+  }
+  .back {
+    bottom: 200px;
+  }
+  .pikachu {
+    position: relative;
+    z-index: 1;
+    order: 1;
+    /* background-color: rgb(65, 167, 167); */
+  }
+  .box {
+    background-color: bisque;
+    order: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .box-text {
+    height: 135px;
+    background-color: aliceblue;
+    left: 0;
+    bottom: 0;
+    order: 2;
   }
 }
 @media (max-width: 360px) {
-  body{
-    display: flex;
-    flex-direction: column;
+  .box-download {
+    width: 312px;
+    font-size: 25px;
   }
-  footer{
+  .box-text span {
     display: none;
-  }
-  .box-text span{
-    display: none;
-  }
-  main {
-    flex-direction: column; 
-    align-items: center;
-    justify-content: flex-end;
-    background-color: aqua;
-    height: 85vh;
-  }
-  .box-text p{
-    display: none;
-  }
-
-  .pikachu {
-    order: 1;
-    width: 333px; 
-    height: auto;
-  }
-  .pikachu img{
-    width: 333px;
-    height: auto; 
   }
   .box-text {
-    order: 2;
     width: 332px;
-    height: auto;
-    text-align: center; 
-    margin-top: 10px; 
+    height: 60px;
   }
-
-  .box-download {
-    order: 3;
-    width: 312px;
-    height: auto;
-    margin-top: 10px; 
-    text-align: center; 
+  .box-text h1{
+    font-size: 40px;
+  }
+  .pikachu {
+    width: 333px;
+    height: 322px;
   }
 }
