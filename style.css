@@ -38,7 +38,7 @@ footer {
   width: 100vw;
 }
 header {
-  background-color: aqua;
+  /* background-color: aqua; */
   padding: 10px;
   height: 10vh;
 }
@@ -50,16 +50,17 @@ main {
 }
 .container {
   position: relative;
-  display: grid;
+  display: flex;
+  flex-grow: 1;
   /* gap: clamp(2rem, 5vw, 359px);  */
-  gap: 359px;
-  grid-template-columns: repeat(3, 1fr);
+  /* gap: 359px; */
+  /* background-color: aquamarine; */
+  justify-content:space-evenly;
+  /* grid-template-columns: repeat(2, 1fr); */
   height: 100%;
   width: 100%;
-  place-items: center;
-  width: 100%;
   /* padding: 0 5vw; */
-  padding-top: 0;
+  /* padding-top: 0; */
   align-items: end;
 }
 
@@ -88,8 +89,9 @@ main {
   width: 100%;
 }
 .box-text {
-  position: relative;
-  left: 130px;
+  /* position: relative; */
+  /* left: 130px; */
+padding-right: 100px;
   bottom: 30px;
   display: flex;
   flex-direction: column;
@@ -97,7 +99,7 @@ main {
   width: 630px;
   /* width: 100%; */
   /* max-width: 630px; */
-  padding: 30px;
+  /* padding: 30px; */
   justify-content: center;
   /* z-index: 3; */
 }
@@ -112,9 +114,10 @@ main {
   height: 75px;
   color: #8e4106;
 }
-.box {
+/* .box {
+  background-color: aqua;
   width: 100%;
-}
+} */
 .box-download {
   display: flex;
   align-items: center;
@@ -141,7 +144,7 @@ footer {
 .autor:hover {
   color: #ffffff;
 }
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   footer {
     display: none;
   }
@@ -189,7 +192,7 @@ footer {
     white-space: nowrap;
   }
 }
-@media (max-width: 360px) {
+@media (max-width: 768px) {
   .container {
     padding-bottom: 30px;
   }
