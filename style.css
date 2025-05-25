@@ -28,7 +28,6 @@ body {
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  /* height: 100vh; */
   font-family: "Righteous", sans-serif;
   background-color: var(--primary-color);
 }
@@ -38,7 +37,6 @@ footer {
   width: 100vw;
 }
 header {
-  /* background-color: aqua; */
   padding: 10px;
   height: 10vh;
 }
@@ -47,20 +45,19 @@ main {
   justify-content: flex-end;
   flex-direction: column;
   flex-grow: 1;
+  
 }
 .container {
+/* display: none; */
+  /* background-color: #ffffff; */
   position: relative;
+   padding: 0px 70px 0px 70px;
+  /* background-color: aliceblue; */
   display: flex;
   flex-grow: 1;
-  /* gap: clamp(2rem, 5vw, 359px);  */
-  /* gap: 359px; */
-  /* background-color: aquamarine; */
-  justify-content:space-evenly;
-  /* grid-template-columns: repeat(2, 1fr); */
+  justify-content:space-around;
   height: 100%;
   width: 100%;
-  /* padding: 0 5vw; */
-  /* padding-top: 0; */
   align-items: end;
 }
 
@@ -78,30 +75,26 @@ main {
 
 .pikachu {
   height: 29rem;
-  width: 30rem;
+  width: 34rem;
   display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  position: absolute;
+   justify-content: center;
+ align-items: end; 
+  position: fixed;
   z-index: -1;
+  background-color: aqua;
 }
+
+
 .pikachu img {
   width: 100%;
 }
 .box-text {
-  /* position: relative; */
-  /* left: 130px; */
-padding-right: 100px;
-  bottom: 30px;
+  /* bottom: 30px; */
   display: flex;
   flex-direction: column;
   height: 144px;
   width: 630px;
-  /* width: 100%; */
-  /* max-width: 630px; */
-  /* padding: 30px; */
   justify-content: center;
-  /* z-index: 3; */
 }
 .box-text h1 {
   position: relative;
@@ -114,10 +107,6 @@ padding-right: 100px;
   height: 75px;
   color: #8e4106;
 }
-/* .box {
-  background-color: aqua;
-  width: 100%;
-} */
 .box-download {
   display: flex;
   align-items: center;
@@ -148,12 +137,19 @@ footer {
   footer {
     display: none;
   }
+  .pikachu{
+    width: 30rem;
+  }
+  main{
+    padding: 0;
+   
+  }
   .container {
     padding-bottom: 15px;
-    gap: 0;
+    gap: 5px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: end;
     flex-direction: column;
   }
   .back {
@@ -175,29 +171,23 @@ footer {
     height: 130px;
     text-align: center;
     width: 510px;
-    left: 0;
-    bottom: 0;
-    background-color: #ffffff;
     padding: 0;
     order: 2;
   }
-  /* .box-text p{
-    text-align: center;
-  }
-  .box-text span{
-   
-     text-align: center; */
-
   .box-text h1 {
     white-space: nowrap;
   }
 }
 @media (max-width: 768px) {
-  .container {
-    padding-bottom: 30px;
+  .container{
+    gap: 0;
   }
-  .box-download {
+  body{
+    overflow: hidden;
+  }
+  .box-download { 
     width: 312px;
+    height: 100px;
     font-size: 25px;
   }
   .box-text span {
@@ -207,7 +197,7 @@ footer {
     background-color: inherit;
     width: 332px;
     height: 50px;
-    /* height: 60px; */
+     height: 60px;
   }
   .box-text h1 {
     font-size: 40px;
