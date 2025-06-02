@@ -179,12 +179,9 @@ footer {
   .container {
     gap: 0;
   }
-  body {
-    overflow: hidden;
-  }
   .box-download {
      width: 80vw;
-    height: 100px; */
+    height: 100px; 
     font-size: 1.5rem;
   }
   .box-text span {
