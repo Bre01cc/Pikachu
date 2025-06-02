@@ -37,7 +37,8 @@ footer {
   width: 100vw;
 }
 header {
-  padding: 10px;
+ 
+  padding: 20px;
   height: 10vh;
 }
 main {
@@ -45,17 +46,16 @@ main {
   justify-content: flex-end;
   flex-direction: column;
   flex-grow: 1;
-  
 }
 .container {
-/* display: none; */
+  /* display: none; */
   /* background-color: #ffffff; */
   position: relative;
-   padding: 0px 70px 0px 70px;
+  padding: 0px 70px 0px 70px;
   /* background-color: aliceblue; */
   display: flex;
   flex-grow: 1;
-  justify-content:space-around;
+  justify-content: space-around;
   height: 100%;
   width: 100%;
   align-items: end;
@@ -70,20 +70,14 @@ main {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  bottom: 130px;
+  bottom: 20%;
+
 }
 
 .pikachu {
-  height: 29rem;
-  width: 34rem;
-  display: flex;
-   justify-content: center;
- align-items: end; 
   position: fixed;
   z-index: -1;
-  background-color: aqua;
 }
-
 
 .pikachu img {
   width: 100%;
@@ -99,11 +93,11 @@ main {
 .box-text h1 {
   position: relative;
   color: #8e4106;
-  flex-grow: 1;
   font-size: 64px;
   width: 100%;
 }
 .box-text span {
+  font-size: 1.2rem;
   height: 75px;
   color: #8e4106;
 }
@@ -111,9 +105,10 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 70px;
+  height: 100px;
   font-size: 1.5rem;
-  width: 300px;
+  gap: 12px;
+  width: 400px;
   background-color: var(--secondary-color);
 }
 .box-download h1 {
@@ -133,16 +128,15 @@ footer {
 .autor:hover {
   color: #ffffff;
 }
-@media (max-width: 1024px) {
+@media (max-width: 960px) {
   footer {
     display: none;
   }
-  .pikachu{
+  .pikachu {
     width: 30rem;
   }
-  main{
+  main {
     padding: 0;
-   
   }
   .container {
     padding-bottom: 15px;
@@ -179,31 +173,31 @@ footer {
   }
 }
 @media (max-width: 768px) {
-  .container{
+  header{
+    padding: auto;
+  }
+  .container {
     gap: 0;
   }
-  body{
+  body {
     overflow: hidden;
   }
-  .box-download { 
-    width: 312px;
-    height: 100px;
-    font-size: 25px;
+  .box-download {
+    /* width: 312px;
+    height: 100px; */
+    font-size: 1.5rem;
   }
   .box-text span {
     display: none;
   }
   .box-text {
-    background-color: inherit;
     width: 332px;
     height: 50px;
-     height: 60px;
   }
   .box-text h1 {
     font-size: 40px;
   }
   .pikachu {
-    width: 333px;
-    height: 322px;
+    width: 90vw;
   }
 }
